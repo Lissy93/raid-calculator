@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+  --form-bg: #ffffffb5;
+  --glass-background: #ffffff2e;
+  --foreground-light: #e4e4f0;
+  --accent: #dfc01a;
+}
+
+body {
+  background: #1b1c2d;  
+  background: -webkit-linear-gradient(to left, #141524, #1b1c2d);
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: var(--foreground-light);
+  color: var(--accent);
+}
+
+h1 {
+  font-size: 4rem;
+  text-shadow: 3px 3px 2px #000000e6;
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--foreground-light);
+}
+
+label {
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+a {
+  color: #dfc01a;
+}
+
+section {
+  background: #7373732e;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  width: calc(100% - 2rem);
+  margin: 0.5rem auto;
+  min-height: 4rem;
+}
+
+.no-results-yet {
+  font-size: 1.6rem;
+  color: var(--foreground-light);
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.raid-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.input-form {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  width: calc(100% - 2rem);
+  justify-content: center;
+  align-items: end;
+  flex-wrap: wrap;
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    input {
+      background: var(--form-bg);
+      font-size: 1.2rem;
+      padding: 0.25rem 0.5rem;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+    }
+  }
+  button {
+    background: var(--form-bg);
+    border: none;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: var(--accent);
+    font-weight: bold;
+  }
+}
+
+
+#raid-results {
+  table{
+    width:100%;
+    table-layout: fixed;
+    text-align: left;
+    font-size: 1.2rem;
+    th {
+      cursor: pointer;
+      color: var(--foreground-light);
+    }
+    tbody tr td {
+      background: var(--form-bg);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      &.red {
+        border-left: 5px solid #e6114d;
+      }
+      &.yellow {
+        border-left: 5px solid #dfc01a;
+      }
+      &.green {
+        border-left: 5px solid #15ca15;
+      }
+    }
+  }
+}
+
+::selection {
+  background: #dfc01a;
+  color: #000;
+}
