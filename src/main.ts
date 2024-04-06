@@ -2,7 +2,7 @@ import van from "vanjs-core"
 import './styles/styles.scss';
 import './styles/background.css';
 
-const { section, h1, h2, p, a, b, ul, li, small, div, label, input, button, table, thead, tbody, tr, th, td} = van.tags
+const { section, h1, h2, p, a, ul, li, div, label, input, button, table, thead, tbody, tr, th, td } = van.tags
 
 const calculateRaid = (diskCount: number, diskSize: number) => {
   const raids = [
@@ -96,7 +96,7 @@ const makeCellClassName = (value: string | number, raids?: any) => {
   }
 
   if (!isNaN(value) && raids) {
-    const numericVal = parseInt(value, 10);
+    const numericVal = parseInt(value.toString(), 10);
 
     // Extract totalCapacity values and sort them
     const capacities = raids.map(raid => raid.totalCapacity).sort((a, b) => a - b);
