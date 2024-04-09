@@ -205,7 +205,7 @@ const About = () => section(
     'Developed by ',
     a({ href: 'https://aliciasykes.com'}, 'Alicia Sykes'),
     ' with ',
-    a({ href: 'https://vanjs.io'}, 'Van.js'),
+    a({ href: 'https://vanjs.org/'}, 'Van.js'),
     '. Source available at ',
     a({ href: 'https://github.com/lissy93/raid-calculator'}, 'github.com/lissy93/raid-calculator'),
     ', and licensed under ',
